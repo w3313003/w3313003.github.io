@@ -67,14 +67,14 @@
     <img class="fly-to-top" src="/assets/images/fly-to-top.png" alt="返回顶部" style="z-index:2;">
 </body>
 <script type="text/javascript">
-    document.querySelector('#btn-toggleSidebarLeft').addEventListener('click', function() {
+    document.querySelector('#btn-toggleSidebarLeft').addEventListener('click', function () {
         document.querySelector('.sidebar').classList.toggle('open-sidebar');
         document.querySelector('.main-content').classList.toggle('open-main');
     }, false);
-    document.querySelector('#btn-toggleSidebarTop').addEventListener('click', function() {
+    document.querySelector('#btn-toggleSidebarTop').addEventListener('click', function () {
         document.querySelector('.sidebar').classList.toggle('open-sidebar-top');
     }, false);
-    document.querySelector('.main-content').onresize = function() {
+    document.querySelector('.main-content').onresize = function () {
         document.body.style.position = 'relative';
     };
 </script>

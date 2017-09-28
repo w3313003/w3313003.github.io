@@ -70,7 +70,6 @@ function throttle(func, wait) {
 }
 ```
 
-本文首发于[我的博客](https://zhuqingguang.github.io)
 
 参考自[这里](https://css-tricks.com/debouncing-throttling-explained-examples/)
 

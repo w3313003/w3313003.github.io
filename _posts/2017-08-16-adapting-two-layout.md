@@ -223,7 +223,6 @@ categories: [CSS]
  
 如果感觉写的有问题，恳请指出。
 
-本文首发于[我的博客](https://zhuqingguang.github.io)
 
 
 
