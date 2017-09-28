@@ -1,0 +1,62 @@
+body {
+  padding-bottom: 30px;
+}
+.note {
+  .overflow-x {
+    overflow: auto;
+  }
+  p {
+    line-height: 170%;
+    margin: 15px 0 0 0;
+  }
+  ul li {
+    line-height: 220%;
+    font-size: 1em;
+  }
+  div.highlighter-rouge {
+    margin: 1em 1.5em;
+    padding: .8em;
+    background-color: #f5f2f0;
+    border: 3px solid #e0dfcc;
+    border-radius: 10px;
+    box-sizing: content-box;
+    overflow: auto;
+    .highlight {
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  code.highlighter-rouge {
+    padding: 2px 4px;
+    margin: auto 3px;
+    font-size: 100%;
+    border-radius: 4px;
+    background-color: pink;
+  }
+  table {
+    border:1px solid #ddd;
+    border-collapse: collapse;
+    padding: 5px;
+    th {
+      width: 40%;
+      text-align: center;
+      border: 1px solid #ddd;
+      padding: 5px;
+    }
+    td {
+      text-align: center;
+      border: 1px solid #ddd;
+      padding: 5px;
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .sidebar {
+    display: none;
+  }
+  .main-content {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

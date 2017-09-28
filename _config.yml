@@ -1,0 +1,27 @@
+# Site settings
+name: 赵杰的博客
+email: w3313003@163.com
+author: Zj
+url: http://w3313003.github.io
+resume_site: http://w3313003.github.io/me/
+github: https://github.com/w3313003/
+baseurl: ""  #根目录
+description: Hello world
+motto: 平凡之路。
+#motto: 平凡之路。
+banner: 生如夏花之绚烂，死如秋叶之静美。
+#permalink: /:categories/:year/:month/:day/:title/
+permalink: /:year/:month/:day/:title/
+excerpt_separator:  '<!-- more -->' #文章摘要
+paginate: 8
+paginate_path: "page:num"
+gems: [jekyll-paginate]
+exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
+github_username: zhaojie
+highlighter: rouge
+markdown: kramdown
+FB:
+  comments :
+    provider : disqus
+    disqus :
+        short_name : zhaojie

@@ -1,0 +1,323 @@
+html,body {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #f5f5d5;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font: 16px georgia, serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  max-width: 1122px;
+  min-width: 280px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling:touch;
+}
+body::before {
+  content: "";
+  display: none;
+  height: 1px;
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1122px;
+  min-width: 280px;
+  overflow: auto;
+}
+$lightGrayTextColor: #888;
+$headerHeigth: 51px;
+
+.fly-to-top {
+  position: fixed;
+  right: 30px;
+  bottom: 100px;
+  cursor: pointer;
+}
+.header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  margin: 0 auto;
+  max-width: 1122px;
+  min-width: 280px;
+  padding: 0 20px;
+  border-bottom: 1px solid #ccc;
+  background-color: #f5f5d5;
+  z-index: 100;
+  #btn-toggleSidebarLeft {
+    display: none;
+  }
+  #btn-toggleSidebarTop {
+    display: inline-block;
+  }
+  .icon-reorder {
+    flex: 0 0 auto;
+    border: none;
+    line-height: 50px;
+    background-color: transparent;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+  .icon-reorder:focus {
+    outline: none ;
+  }
+  .logo {
+    flex: 0 0 auto;
+    font-size: 1.2em;
+    line-height: 1.7em;
+    color: #555;
+    font-weight: 100;
+    margin-left: 15px;
+  }
+  .top-nav {
+    flex: 1 1 auto;
+    height: 100%;
+    a.nav-link {
+      display: none;
+      margin-top: 10px;
+      line-height: 40px;
+      color: $lightGrayTextColor;
+      text-decoration: none;
+      vertical-align: bottom;
+    }
+    a:last-child {
+      display: block;
+      float: right;
+      margin-right: 50px;
+    }
+  }
+}
+.sidebar {
+  position:fixed;
+  width: 100%;
+  transform: translateY(-100%);
+  margin-right: 10px;
+  box-sizing: border-box;
+  margin-top: $headerHeigth;
+  transition: all .5s ease;
+  border: 1px solid transparent;
+  background-color: #f5f5d5;
+  z-index: 4;
+  .side-container {
+    width: 90%;
+    // background-color: #deebf7;
+    margin: 0 auto;
+    border-radius: 15px;
+    &>div {
+      width: 250px;
+      margin: 0 auto;
+    }
+    .personel {
+      background-color: #deebf7;
+      border-radius: 10px;
+      border: 1px solid transparent;
+      margin-bottom: 10px;
+      .avator {
+        box-sizing: padding-box;
+        width: 150px;
+        height: 150px;
+        padding: 1px;
+        margin: 10px auto 10px auto;
+        border: 1px solid #ddd;
+        border-radius: 50%;
+        img {
+          width: 150px;
+          height: 150px;;
+          border-radius: 50%;
+        }
+      }
+      p {
+        margin: 10px;
+      }
+      .name {
+        margin: 10px auto;
+        color: #333;
+        font-weight: normal;
+      }
+      .signature {
+        font-family: "宋体",STXihei, "Microsoft YaHei";
+      }
+      .social {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 20px;
+        .flex-row {
+          width: 99%;
+          display: flex;
+          justify-content: space-around;
+          margin-bottom: 10px;
+          a {
+              width: 90px;
+              color: #50504f;
+              text-decoration: none;
+              i {
+                margin-right: 10px;
+              }
+          }
+        }
+      }
+    }
+
+    .website-nav {
+      margin-top: 10px;
+      padding: 10px 00px;
+      background-color: #deebf7;
+      border-radius: 10px;
+      p {
+        margin: 0 auto 10px 10px;
+      }
+      .nav-ul {
+        margin: 10px auto 10px auto;
+        padding-left: 20px;
+        display: flex;
+        li {
+          display: inline-block;
+          flex: 1 0 auto;
+          list-style: none;
+          a {
+            text-decoration: none;
+            color: #50504f;
+          }
+        }
+      }
+    }
+    .blog-category {
+      margin: 10px auto 0 auto;
+      background-color: #deebf7;
+      border-radius: 10px;
+      padding: 10px 0;
+      p {
+        margin: 0  auto 10px 10px;
+      }
+      .category-list {
+        margin: 10px auto 0 auto;
+        padding-left: 20px;
+        li {
+          list-style: none;
+          margin-bottom: 5px;
+          font-size: 14px;
+          a {
+            color: #50504f;
+            text-decoration: none;
+            span {
+              margin-left: 5px;
+            }
+          }
+        }
+        li:last-child {
+          margin-bottom: 0;
+        }
+        li::before{
+          content: ">";
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+
+
+  .text-center {
+    text-align: center;
+  }
+}
+.main-content {
+  position: relative;
+  box-sizing: border-box;
+  width: calc(100%);
+  height: calc(100% - 52px);
+  margin-top: $headerHeigth;
+  transition: all .5s ease;
+  margin-left: 0;
+  padding:0px 20px 0 20px;
+  overflow-x: hidden;
+
+}
+.open-sidebar {
+  margin-left: 240px;
+}
+.open-main {
+  margin-left: 240px;
+  width: calc(100% - 240px);
+}
+.open-sidebar-top {
+  transform: translateY(0);
+}
+/*>= 992px*/
+@media screen and (min-width: 768px) {
+  .header {
+    #btn-toggleSidebarLeft {
+      display: inline-block;
+    }
+    #btn-toggleSidebarTop {
+      display: none;
+    }
+    .top-nav {
+      display: flex;
+      justify-content: flex-end;
+      a.nav-link {
+        display: inline-block;
+        margin-right: 50px;
+      }
+    }
+  }
+  .sidebar {
+    width: 240px;
+    margin-left: -240px;
+    transform: translateY(0%);
+    .side-container {
+      width: 100%;
+      &>div {
+        width: 240px;
+        margin: 0 auto;
+      }
+    }
+  }
+  .open-sidebar {
+    margin-left: 0px;
+    transform: translateY(0%);
+  }
+}
+/* >= 768px*/
+@media screen and (min-width: 1024px) {
+  .header {
+    #btn-toggleSidebarTop, #btn-toggleSidebarLeft {
+      display: none;
+    }
+  }
+
+  .sidebar {
+    width: 200px;
+    margin-left: 20px;
+    .side-container {
+      width: 100%;
+      &>div {
+        width: 200px;
+        margin: 0 auto;
+      }
+    }
+  }
+  .main-content {
+    margin-left: 220px;
+    width: calc(100% - 230px);
+  }
+}
+
+/*>= 1200px*/
+@media screen and (min-width: 1200px) {
+
+}

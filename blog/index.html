@@ -1,0 +1,33 @@
+---
+layout: blog
+title: Zhu Qingguang's Blog
+---
+<link rel="stylesheet" href="/assets/css/blog-category.css">
+{% for post in site.posts %}
+<article class="article">
+  <header class="article-header">
+    <h1><a href="{{ post.url }}">&nbsp;{{ post.title }}</a></h1>
+  </header>
+  <main class="article-main">
+    {{ post.excerpt }}
+    <p class="continue"><a href="{{ post.url }}">继续阅读全文&nbsp;>></a></p>
+  </main>
+  <footer class="article-footer">
+      <div class="footer-group">
+        <span class="label">日期:</span><time datetime="{{ post.date }}">{{ post.date | date_to_long_string }}</time>
+      </div>
+      <div class="footer-group">
+        <span class="label">分类:</span>
+        {% for category in post.categories %}
+        <a class="footer-category">{{ category }}</a>
+        {% endfor %}
+      </div>
+      <div class="footer-group">
+        <span class="label">标签:</span>
+        {% for tag in post.tags %}
+        <span class="footer-tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+  </footer>
+</article>
+{% endfor %}

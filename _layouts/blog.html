@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="baidu-site-verification" content="XWPZuTUYwZ" />
+    <title>{{page.title}}</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <link rel="stylesheet" href="/assets/css/blog.css">
+    <link rel="stylesheet" href="/assets/css/common/font-awesome.css">
+</head>
+
+<body style="position: relative;">
+    <div class="container">
+        <header class="header">
+            <a class="icon-reorder" id="btn-toggleSidebarLeft"></a>
+            <a class="icon-reorder" id="btn-toggleSidebarTop"></a>
+            <h1 class="logo">赵杰的博客</h1>
+            <nav class="top-nav">
+                <a href="/" class="nav-link">首页</a>
+                <a href="/blog" class="nav-link">博客</a>
+                <a href="/notes" class="nav-link">笔记</a>
+                <a href="/about" class="nav-link">关于</a>
+                <a href="" class="nav-link"><i class="icon-rss"></i></a>
+            </nav>
+        </header>
+        <aside class="sidebar">
+            <div class="side-container">
+                <div class="personel">
+                    <div class="avator">
+                        <img src="/assets/images/avator.jpg" alt="朱庆广">
+                    </div>
+                    <h1 class="name text-center">赵杰</h1>
+                    <p class="signature text-center">坚持就是胜利</p>
+                    <div class="social text-center">
+                        <div class="flex-row">
+                            <a href="https://github.com/w3313003">
+                                <i class="icon-github"></i>Github</a>
+                            <a href="mailto:w3313003@163.com">
+                                <i class="icon-envelope"></i>Email</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-category">
+                    <p>分类</p>
+                    <ul class="category-list">
+                        {% for category in site.categories %}
+                        <li><a href="/blog/category.html?category={{category | first }}">{{ category | first }}<span class="category-size">({{ category | last | size }})</span></a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="website-nav">
+                    <p>站点导航</p>
+                    <ul class="nav-ul">
+                        <li><a href="/">主页</a></li>
+                        <li><a href="/">博客</a></li>
+                        <li><a href="/notes">笔记</a></li>
+                        <li><a href="/me">关于</a></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+        <main class="main-content">
+            {{content}}
+        </main>
+    </div>
+    <img class="fly-to-top" src="/assets/images/fly-to-top.png" alt="返回顶部" style="z-index:2;">
+</body>
+<script type="text/javascript">
+    document.querySelector('#btn-toggleSidebarLeft').addEventListener('click', function() {
+        document.querySelector('.sidebar').classList.toggle('open-sidebar');
+        document.querySelector('.main-content').classList.toggle('open-main');
+    }, false);
+    document.querySelector('#btn-toggleSidebarTop').addEventListener('click', function() {
+        document.querySelector('.sidebar').classList.toggle('open-sidebar-top');
+    }, false);
+    document.querySelector('.main-content').onresize = function() {
+        document.body.style.position = 'relative';
+    };
+</script>
+<script src="/tensent.js">
+</script>
+
+</html>
