@@ -13,7 +13,10 @@ tags: [Python]
 
 列表推导式（list comprehension）是利用其他列表创建新列表（类似于数学术语中的集合推导式）的一种方法。它的工作方式类似于for循环。
 <!-- more -->
+<<<<<<< HEAD
 
+=======
+>>>>>>> c43bbb808d033ee90535efb2bca0435ffa37ec71
 
 > 列表生成式（list comprehension）是一种简化代码的优美方法。根据python文档，“列表生成式提供了一种创建列表的简洁方法。
 
