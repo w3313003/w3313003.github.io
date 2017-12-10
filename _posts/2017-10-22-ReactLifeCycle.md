@@ -1,17 +1,19 @@
 ---
+
 layout: post
 title: "React生命周期"
-date: 2017-10-13
+date: 2017-10-22
 categories: [JavaScript]
-datetime: 2017-10-13
-tags: [JavaScript][React]
+datetime: 2017-10-22
+tags: [JavaScript]
 
 ---
 
 * content
 {:toc}
 
-所谓的生命周期就是React中定制的一套执行函数的顺序 
+最近学习了react。 React生命周期分为三个阶段，每一个阶段都有不同的函数执行顺序，值得注意的是实例化和销毁阶段执行一次，存在期是可以反复执行的：
+
 <!-- more -->
 
 > 最近学习了react。 React生命周期分为三个阶段，每一个阶段都有不同的函数执行顺序，值得注意的是实例化和销毁阶段执行一次，存在期是可以反复执行的：
