@@ -22,6 +22,10 @@ body {
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
 }
+body::selection {
+    background: #439de4;
+    color: #fff;
+}
 
 
 
