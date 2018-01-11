@@ -17,8 +17,8 @@ tags: [TypeScript]
 1. 初始化项目
 ```js
     create-react-app app --scripts-version=react-scripts-ts
-cd app 
-yarn start
+	cd app 
+	yarn start
 ```
 2. 引入redux react-router react-redux
 ```js
@@ -36,19 +36,18 @@ class App extends React.Component<PropsCheck>{
 ```
 4. 使用cssModules 
  需要引入```typings-for-css-modules-loader```
-```ts
+```js
     yarn add --dev typings-for-css-modules-loader
 ```
 之后把css-loader修改为typings-for-css-modules-loader,modules修改为true
 4. tsconfig & tsLint（自定义）
-```
-// tsconfig:
-"allowSyntheticDefaultImports": true,
-"typeRoots": [
-    "node_modules/@types"
-],
-"experimentalDecorators": true
-
-// tsLint
-no-any: false
+```js
+	// tsconfig:
+	"allowSyntheticDefaultImports": true,
+	"typeRoots": [
+	    "node_modules/@types"
+	],
+	"experimentalDecorators": t
+	// tsLint
+	no-any: false
 ```
