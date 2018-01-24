@@ -40,7 +40,7 @@ class App extends React.Component<PropsCheck>{
     yarn add --dev typings-for-css-modules-loader
 ```
 之后把css-loader修改为typings-for-css-modules-loader,modules修改为true
-4. tsconfig & tsLint（自定义）
+5. tsconfig & tsLint（自定义）
 ```js
 	// tsconfig:
 	"allowSyntheticDefaultImports": true,
@@ -50,4 +50,22 @@ class App extends React.Component<PropsCheck>{
 	"experimentalDecorators": t
 	// tsLint
 	no-any: false
+```
+6. 路由懒加载
+```js
+	<Route path="/v4/appeal/fillname" component={FillName} />
+	{* 这里对某些组件做异步加载 *}
+	<Route
+	    path="/v4/appeal/selectuser"
+	    getComponent={selectUser()}
+	/>
+	
+	function selectUser() {
+	    return (location, cb) => {
+	            require(['../accountselect/container/AccountSelect'], function (component) {
+	                cb(null, component);
+	            });
+	        };
+	    }	
+
 ```
