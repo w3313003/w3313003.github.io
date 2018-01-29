@@ -69,3 +69,19 @@ class App extends React.Component<PropsCheck>{
 	    }	
 
 ```
+7. path解析函数(for alias)
+```js
+function pathResolve(dir) {
+	return path.join(__dirname, '..', dir);
+}
+//  同时需在tsconfig中加上
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "paths": {
+            "aliasName": ["path"]
+        }
+    }
+}
+
+```
