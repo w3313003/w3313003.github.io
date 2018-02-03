@@ -18,7 +18,7 @@ tags: [TypeScript]
 > 和es6语法类似，TypeScript 中可以支持使用class语法创建一个类。
 
 ---
-##### 类的例子
+### 类的例子
 example:
 ```ts
 class Car {
@@ -45,7 +45,7 @@ let car = new Car('petrol');
 car.drive(100); // 输出：A car runs 100m powered by petrol
 
 ```
-##### 继承与多态
+### 继承与多态
 
 封装、继承、多态是面向对象的三个特性。上面的例子中把汽车的行为写到一个类中，即所谓的封装。在 TypeScript 中，使用 extends 关键字即可方便地实现继承。示例代码如下：
 
@@ -72,7 +72,7 @@ landRover.drive(200);    // 调用子类的 drive() 方法
 ```
 从上面的例子可以看到，MotoCar 和 Jeep 是基类Car的子类，通过 extends 来继承父类，子类可以访问父类的属性和方法，也可以重写父类的方法。Jeep 类重写了父类的 drive() 方法，这样 drive() 方法在不同的类中就具有不同的功能，这就是多态。
 
-##### 修饰符
+### 修饰符
 
 在类中的修饰器可以分为公共（public）、私有（private）和受保护（protected）三种类型。
 
@@ -132,7 +132,7 @@ console.log(tesla.drive());    // 正常
 console.log(tesla.engine);    // 报错
 
 ```
-##### 静态属性
+### 静态属性
 类的静态成员存在于类本身而不是类的实例上，我们使用 类名. 来访问静态属性。可以使用 static 关键字来定义类的静态属性，示例代码如下：
 
 ```js
@@ -156,7 +156,7 @@ console.log(grid2.calculateDistanceFromOrigin({x: 10, y: 10}));
 
 ```
 
-##### 抽象类
+### 抽象类
 
 TypeScript 有抽象类的概念，他是供其他类继承的基类，不能直接实例化。抽象类必须包含一些抽象方法，同时也可以包含非抽象的成员。abstract 关键字用于定义抽象类和抽象方法。抽象类中的抽象方法不包含具体实现，但是必须在派生类中实现，示例代码如下:
 
