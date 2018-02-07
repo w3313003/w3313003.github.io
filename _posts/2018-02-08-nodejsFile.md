@@ -2,9 +2,9 @@
 layout: post
 title: "nodeJs文件读取"
 date: 2018-02-08
-categories: [nodeJs文件读取]
+categories: [nodeJs]
 datetime: 2018-02-08
-tags: [nodeJs文件读取]
+tags: [nodeJs]
 
 ---
 * content
