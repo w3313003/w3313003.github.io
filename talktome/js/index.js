@@ -57,8 +57,8 @@ var myBot = new BotUI('hello-world');
           return myBot.message.add ({
           delay: 1000,
           loading: true,
-          content: `Go ahead, try [my website](http://zhuqingguang.github.io) or <a href="mailto:vac872089248@gmail.com">Email me.</a> </br>
-                    Here is my [Github address](https://github.com/zhuqingguang).`
+          content: `Go ahead, try [my website](http://w3313003.github.io) or <a href="mailto:vac872089248@gmail.com">Email me.</a> </br>
+                    Here is my [Github address](https://github.com/w3313003).`
         });
         break;/*
         case 'your hobbies':

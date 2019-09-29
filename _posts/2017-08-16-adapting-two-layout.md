@@ -9,7 +9,7 @@ categories: [CSS]
 * content
 {:toc}
 
-总结一下左边固定，右边自适应的两栏布局的七种方法。其中有老生常谈的``float``方法,BFC方法，也有CSS3的``flex``布局与``grid``布局。并非所有的布局都会在开发中使用，但是其中也会涉及一些知识点。关于最终的效果，可以查看[这里](https://zhuqingguang.github.io/vac-works/cssLayout/index1.html)
+总结一下左边固定，右边自适应的两栏布局的七种方法。其中有老生常谈的``float``方法,BFC方法，也有CSS3的``flex``布局与``grid``布局。并非所有的布局都会在开发中使用，但是其中也会涉及一些知识点。关于最终的效果，可以查看[这里](https://w3313003.github.io/vac-works/cssLayout/index1.html)
 <!-- more -->
 
 常用的宽度自适应的方法通常是利用了``block``水平的元素宽度能随父容器调节的流动特性。另外一种思路是利用CSS中的``calc()``方法来动态设定宽度。还有一种思路是，利用CSS中的新型布局``flex layout``与``grid layout``。

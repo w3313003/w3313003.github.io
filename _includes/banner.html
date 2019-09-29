@@ -1,13 +1,13 @@
 <div class="banner">
-  <div class="container lh30">
-    {% if page.categories != null %}
-    <a href="{{ '/categories/' | prepend: site.baseurl }}#{{ page.categories }}-ref">{{page.categories}}</a> /
-    <a href="{{ '/tag/' | prepend: site.baseurl }}#{{ page.tag }}-ref">{{page.tag}}</a> {% else %} {{ site.banner }} {% endif
+    <div class="container lh30">
+        {% if page.categories != null %}
+        <a href="{{ '/categories/' | prepend: site.baseurl }}#{{ page.categories }}-ref">{{page.categories}}</a> /
+        <a href="{{ '/tag/' | prepend: site.baseurl }}#{{ page.tag }}-ref">{{page.tag}}</a> {% else %} {{ site.banner }} {% endif
     %}
-    <div id="search-container" class="pull-right">
-      <input type="text" id="search-input" placeholder=" 试试直接搜索吧...">
-      <label class="searchIcon glyphicon glyphicon-search" for="search-input"></label>
-      <ul id="results-container"></ul>
+        <div id="search-container" class="pull-right">
+            <input type="text" id="search-input" placeholder=" 试试直接搜索吧...">
+            <label class="searchIcon glyphicon glyphicon-search" for="search-input"></label>
+            <ul id="results-container"></ul>
+        </div>
     </div>
-  </div>
 </div>
